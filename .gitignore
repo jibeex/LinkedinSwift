@@ -1,2 +1,8 @@
-LinkedinSwift/Pods/
-xcuserdata/
+*.DS_Store
+build/
+Build/
+**/xcuserdata
+*.xcsettings
+
+Pods/
+Podfile.lock

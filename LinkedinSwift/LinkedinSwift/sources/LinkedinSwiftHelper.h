@@ -13,6 +13,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, LinkedinSwiftHelperSignInPreference) {
+    LinkedinSwiftHelperSignInPreferenceWebview,
+    LinkedinSwiftHelperSignInPreferenceLinkedinApp,
+    LinkedinSwiftHelperSignInPreferenceLinkedinAppIfInstalledElseWebview,
+};
+
 /**
  *  LinkedinSwiftRequestSuccessCallback
  *
@@ -78,7 +84,7 @@ static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestDELETE = @"D
  *  @param error    callback
  *  @param cancel   callback
  */
-- (void)authorizeSuccess:(__nullable LinkedinSwiftAuthRequestSuccessCallback)success error:(__nullable LinkedinSwiftRequestErrorCallback)error cancel:(__nullable LinkedinSwiftRequestCancelCallback)cancel;
+- (void)authorizeSignInPreference:(LinkedinSwiftHelperSignInPreference)signInPreference success:(__nullable LinkedinSwiftAuthRequestSuccessCallback)successCallback error:(__nullable LinkedinSwiftRequestErrorCallback)errorCallback cancel:(__nullable LinkedinSwiftRequestCancelCallback)cancelCallback;
 /**
  *  Request Linkedin api
  *

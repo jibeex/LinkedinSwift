@@ -45,16 +45,16 @@ class ViewController: UIViewController {
         *   Access token later after login: linkedinHelper.lsAccessToken
         */
         
-        linkedinHelper.authorizeSuccess({ [unowned self] (lsToken) -> Void in
+        linkedinHelper.authorizeSignInPreference(.LinkedinAppIfInstalledElseWebview, success: { [unowned self] (lsToken) -> Void in
             
             self.writeConsoleLine("Login success lsToken: \(lsToken)")
-        }, error: { [unowned self] (error) -> Void in
-            
-            self.writeConsoleLine("Encounter error: \(error.localizedDescription)")
-        }, cancel: { [unowned self] () -> Void in
-            
-            self.writeConsoleLine("User Cancelled!")
-        })
+            }, error: { [unowned self] (error) -> Void in
+                
+                self.writeConsoleLine("Encounter error: \(error.localizedDescription)")
+            }, cancel: { [unowned self] () -> Void in
+                
+                self.writeConsoleLine("User Cancelled!")
+            })
     }
     
     /**

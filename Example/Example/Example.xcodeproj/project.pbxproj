@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		102CE6241CF34FB800BF47BA /* LinkedinSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102CE6231CF34FB800BF47BA /* LinkedinSwift.framework */; };
 		10905A821BFE8FF9002AA119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10905A811BFE8FF9002AA119 /* AppDelegate.swift */; };
 		10905A841BFE8FF9002AA119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10905A831BFE8FF9002AA119 /* ViewController.swift */; };
 		10905A871BFE8FF9002AA119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10905A851BFE8FF9002AA119 /* Main.storyboard */; };
 		10905A891BFE8FF9002AA119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10905A881BFE8FF9002AA119 /* Assets.xcassets */; };
 		10905A8C1BFE8FF9002AA119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10905A8A1BFE8FF9002AA119 /* LaunchScreen.storyboard */; };
+		600BF4281D2E6A4400CC3743 /* libPods-LinkedinSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 600BF4271D2E6A4400CC3743 /* libPods-LinkedinSwift.a */; };
+		600BF4391D2E6D0D00CC3743 /* LinkedinSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600BF42B1D2E6B3E00CC3743 /* LinkedinSwift.framework */; };
+		600BF43A1D2E6D0D00CC3743 /* LinkedinSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 600BF42B1D2E6B3E00CC3743 /* LinkedinSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		10905AAA1BFEAD38002AA119 /* Embed Frameworks */ = {
+		600BF43B1D2E6D0D00CC3743 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				600BF43A1D2E6D0D00CC3743 /* LinkedinSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +41,8 @@
 		10905A8B1BFE8FF9002AA119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10905A8D1BFE8FF9002AA119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10905A951BFE91EB002AA119 /* ObjectiveCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCHeader.h; sourceTree = "<group>"; };
+		600BF4271D2E6A4400CC3743 /* libPods-LinkedinSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LinkedinSwift.a"; path = "../../LinkedinSwift/Build/Products/Debug-iphoneos/libPods-LinkedinSwift.a"; sourceTree = "<group>"; };
+		600BF42B1D2E6B3E00CC3743 /* LinkedinSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkedinSwift.framework; path = "../../LinkedinSwift/Build/Products/Debug-iphoneos/LinkedinSwift.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102CE6241CF34FB800BF47BA /* LinkedinSwift.framework in Frameworks */,
+				600BF4391D2E6D0D00CC3743 /* LinkedinSwift.framework in Frameworks */,
+				600BF4281D2E6A4400CC3743 /* libPods-LinkedinSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,8 @@
 		10905A751BFE8FF9002AA119 = {
 			isa = PBXGroup;
 			children = (
+				600BF42B1D2E6B3E00CC3743 /* LinkedinSwift.framework */,
+				600BF4271D2E6A4400CC3743 /* libPods-LinkedinSwift.a */,
 				102CE6231CF34FB800BF47BA /* LinkedinSwift.framework */,
 				10905A801BFE8FF9002AA119 /* Example */,
 				10905A7F1BFE8FF9002AA119 /* Products */,
@@ -93,7 +101,7 @@
 				10905A7A1BFE8FF9002AA119 /* Sources */,
 				10905A7B1BFE8FF9002AA119 /* Frameworks */,
 				10905A7C1BFE8FF9002AA119 /* Resources */,
-				10905AAA1BFEAD38002AA119 /* Embed Frameworks */,
+				600BF43B1D2E6D0D00CC3743 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,11 +282,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LiExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Example/ObjectiveCHeader.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -293,11 +302,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LiExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Example/ObjectiveCHeader.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
